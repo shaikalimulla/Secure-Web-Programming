@@ -1,0 +1,140 @@
+-- MySQL dump 10.15  Distrib 10.0.23-MariaDB, for Linux (x86_64)
+--
+-- Host: localhost    Database: travel
+-- ------------------------------------------------------
+-- Server version	10.0.23-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `login`
+--
+
+DROP TABLE IF EXISTS `login`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `login` (
+  `loginid` int(11) NOT NULL AUTO_INCREMENT,
+  `ip` varchar(45) NOT NULL,
+  `user` varchar(45) DEFAULT NULL,
+  `date` datetime NOT NULL,
+  `action` varchar(10) NOT NULL,
+  PRIMARY KEY (`loginid`)
+) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `login`
+--
+
+LOCK TABLES `login` WRITE;
+/*!40000 ALTER TABLE `login` DISABLE KEYS */;
+INSERT INTO `login` VALUES (1,'198.18.2.66','ali','2016-04-22 04:26:05','failure'),(2,'198.18.2.66','ali','2016-04-22 04:26:09','success'),(3,'198.18.2.66','ali','2016-04-22 04:28:25','success'),(4,'198.18.2.66','admin','2016-04-22 04:32:23','success'),(5,'198.18.2.66','ali','2016-04-22 04:44:11','success'),(6,'198.18.2.66','admin','2016-04-22 04:44:19','success'),(7,'198.18.2.66','ali','2016-04-22 05:22:56','success'),(8,'198.18.2.66','admin','2016-04-22 05:25:59','success'),(9,'198.18.2.66','','2016-04-22 05:32:12','failure'),(10,'198.18.2.66','ali','2016-04-22 05:32:17','success'),(11,'198.18.2.66','admin','2016-04-22 05:32:27','success'),(12,'198.18.2.66','ali','2016-04-22 05:33:17','success'),(13,'198.18.2.66','ali','2016-04-22 05:44:00','success'),(14,'198.18.2.66','ali','2016-04-22 05:44:08','failure'),(15,'198.18.2.66','ali','2016-04-22 05:44:13','success'),(16,'198.18.2.66','ali','2016-04-22 05:47:04','success'),(17,'198.18.2.66','ali','2016-04-22 05:47:51','success'),(18,'198.18.2.66','admin','2016-04-22 05:48:11','success'),(19,'198.18.2.66','admin','2016-04-22 05:48:47','failure'),(20,'198.18.2.66','admin','2016-04-22 05:49:00','success'),(21,'198.18.2.66','admin','2016-04-22 05:49:14','success'),(22,'198.18.2.66','','2016-04-22 15:09:51','failure'),(23,'198.18.2.66','ali','2016-04-22 15:09:56','success'),(24,'198.18.2.66','admin','2016-04-22 15:10:24','success'),(25,'198.18.2.66','admin','2016-04-22 15:11:56','success'),(26,'198.18.2.66','ali','2016-04-22 17:10:55','success'),(27,'198.18.2.66','','2016-04-22 18:00:02','failure'),(28,'198.18.2.66','','2016-04-22 18:01:38','failure'),(29,'198.18.2.66','','2016-04-22 18:02:13','failure'),(30,'198.18.2.66','ali','2016-04-22 18:02:17','success'),(31,'198.18.2.66','','2016-04-22 18:07:47','failure'),(32,'198.18.2.66','ali','2016-04-22 18:09:33','success'),(33,'198.18.2.66','','2016-04-22 18:14:17','failure'),(34,'198.18.2.66','admin','2016-04-22 18:14:24','failure'),(35,'198.18.2.66','admin','2016-04-22 18:14:31','success'),(36,'198.18.2.70','','2016-04-22 18:44:10','failure'),(37,'198.18.2.70','','2016-04-22 18:44:17','failure'),(38,'198.18.2.70','ali','2016-04-22 18:44:20','success'),(39,'198.18.2.66','','2016-04-22 18:45:09','failure'),(40,'198.18.2.66','ali','2016-04-22 18:45:14','success'),(41,'198.18.2.66','admin','2016-04-22 18:46:35','success'),(42,'198.18.2.66','','2016-04-22 20:44:44','failure'),(43,'198.18.2.66','ali','2016-04-22 20:44:50','success'),(44,'198.18.2.66','','2016-04-23 00:19:40','failure'),(45,'198.18.2.66','admin','2016-04-23 00:19:51','success'),(46,'198.18.2.66','ali','2016-04-23 00:20:47','success'),(47,'198.18.1.214','','2016-04-23 14:11:17','failure'),(48,'198.18.1.214','abcd','2016-04-23 14:11:23','success'),(49,'198.18.2.66','','2016-04-23 15:07:41','failure'),(50,'198.18.2.66','ali','2016-04-23 15:07:45','success'),(51,'198.18.2.102','','2016-04-25 02:59:48','failure'),(52,'198.18.2.102','admin','2016-04-25 02:59:58','failure'),(53,'198.18.1.214','abcd','2016-04-25 20:01:22','failure'),(54,'198.18.1.214','abcd','2016-04-25 20:01:36','failure'),(55,'198.18.1.214','joe','2016-04-25 20:01:52','success'),(56,'198.18.2.38','','2016-04-25 22:11:52','failure'),(57,'198.18.2.66','','2016-04-26 02:45:21','failure'),(58,'198.18.2.66','admin','2016-04-26 02:45:31','success'),(59,'198.18.2.66','ali','2016-04-26 02:47:27','success'),(60,'198.18.2.66','joe','2016-04-26 02:48:30','success'),(61,'198.18.2.66','admin','2016-04-26 02:49:15','failure'),(62,'198.18.2.66','','2016-04-26 02:49:34','failure'),(63,'198.18.2.66','','2016-04-26 15:42:20','failure'),(64,'198.18.2.66','','2016-04-26 16:10:33','failure'),(65,'198.18.2.66','ali','2016-04-26 16:10:38','success'),(66,'198.18.2.66','admin','2016-04-26 16:11:58','success');
+/*!40000 ALTER TABLE `login` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `overall_rating`
+--
+
+DROP TABLE IF EXISTS `overall_rating`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `overall_rating` (
+  `city` varchar(256) NOT NULL,
+  `rating` int(11) NOT NULL,
+  `country` varchar(256) NOT NULL,
+  PRIMARY KEY (`city`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `overall_rating`
+--
+
+LOCK TABLES `overall_rating` WRITE;
+/*!40000 ALTER TABLE `overall_rating` DISABLE KEYS */;
+INSERT INTO `overall_rating` VALUES ('a',2,'in'),('Alhambra',78,'Spain'),('Anakiwa',74,'New Zealand'),('Bangalore',60,'India'),('Bavarian Alps',77,'Germany'),('Bay of Fires',80,'Australia'),('bbb',80,'in'),('Boulder',70,'United States'),('Bujuku',68,'Uganda'),('Canadian Rockies',82,'Canada'),('Chennai',60,'India'),('County Mayo',78,'Ireland'),('Everest Base Camp',76,'Nepal'),('Gaspe Peninsula',80,'Canada'),('Grand Canyon',80,'United states'),('Grindelwald',74,'Switzerland'),('Kakadu National Park, Jabiru',78,'Australia'),('Kauai',72,'Hawaii, United States'),('Kungsleden',70,'Sweden'),('London',80,'England'),('Long Range Traverse',76,'canada'),('Maimi',80,'United States'),('Manhattan',75,'United States'),('Patagonia',78,'Argentina'),('Petra',77,'Jordan'),('san francisco',80,'united states'),('South Island',80,'New Zealand'),('Yosemite Grand Traverse',78,'united states');
+/*!40000 ALTER TABLE `overall_rating` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_rating`
+--
+
+DROP TABLE IF EXISTS `user_rating`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_rating` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(256) NOT NULL,
+  `place_type` varchar(256) NOT NULL,
+  `rating` int(11) NOT NULL,
+  `city` varchar(256) NOT NULL,
+  `state` varchar(256) NOT NULL,
+  `country` varchar(256) NOT NULL,
+  `zip` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_fk_idx` (`city`),
+  CONSTRAINT `user_fk` FOREIGN KEY (`city`) REFERENCES `overall_rating` (`city`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_rating`
+--
+
+LOCK TABLES `user_rating` WRITE;
+/*!40000 ALTER TABLE `user_rating` DISABLE KEYS */;
+INSERT INTO `user_rating` VALUES (3,'ali','Scenery',75,'Manhattan','New York','United States',10036),(4,'ali','Scenery',90,'Boulder','Colorado','United States',80301),(5,'shaik','Scenery',60,'Boulder','Colorado','United States',80301),(6,'shaik','Scenery',50,'Boulder','Colorado','United States',80301),(8,'shaik','Beach',90,'Chennai','TN','India',600020),(9,'shaik','Scenery',80,'Bangalore','KN','India',560037),(10,'shaik','Scenery',70,'Bangalore','KN','United States',560037),(11,'shaik','Beach',60,'Chennai','TN','India',600020),(12,'shaik','Scenery',40,'Bangalore','KN','India',560037),(13,'shaik','beach',30,'Chennai','TN','India',600020),(14,'shaik','Scenery',50,'Bangalore','KN','India',560037),(15,'ali','beach',80,'Maimi','FL','United States',33109),(16,'admin','Island',80,'South Island','None','New Zealand',0),(17,'admin','National Park',78,'Kakadu National Park, Jabiru','NT','Australia',886),(18,'admin','Island',80,'Gaspe Peninsula','','Canada',0),(19,'admin','cultural',78,'Alhambra','Granada','Spain',0),(20,'admin','hiking',77,'Bavarian Alps','','Germany',0),(21,'admin','hiking',70,'Kungsleden','','Sweden',0),(22,'admin','hiking',80,'Grand Canyon','AZ','United states',0),(23,'admin','hiking',76,'Everest Base Camp','','Nepal',0),(24,'admin','hiking',78,'Patagonia','','Argentina',0),(25,'admin','hiking',77,'Petra','','Jordan',0),(26,'admin','hiking',74,'Grindelwald','','Switzerland',0),(27,'admin','hiking',78,'Yosemite Grand Traverse','California','united states',0),(28,'admin','hiking',82,'Canadian Rockies','Alberta','Canada',0),(29,'admin','hiking',80,'Bay of Fires','Tasmania','Australia',0),(30,'admin','hiking',76,'Long Range Traverse','Newfoundland','canada',0),(31,'admin','hiking',74,'Anakiwa','Marlborough','New Zealand',0),(32,'admin','hiking',68,'Bujuku','','Uganda',0),(33,'admin','hiking',72,'Kauai','Hawaii','Hawaii, United States',0),(34,'admin','hiking',78,'County Mayo','Connacht','Ireland',0),(35,'ali','history',80,'London','','England',0),(36,'ali','b',0,'a','','in',0),(37,'ali','b',2,'a','','in',0),(38,'ali','b',4,'a','h','in',0),(39,'admin','beach',80,'san francisco','california','united states',0),(40,'ali','ccc',80,'bbb','aa','in',0),(41,'admin','hiking',80,'boulder','co','united states',80301);
+/*!40000 ALTER TABLE `user_rating` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `userid` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(256) NOT NULL,
+  `password` varchar(256) NOT NULL,
+  `salt` varchar(64) NOT NULL,
+  `email` varchar(256) NOT NULL,
+  PRIMARY KEY (`userid`),
+  UNIQUE KEY `username_UNIQUE` (`username`),
+  CONSTRAINT `login_fk` FOREIGN KEY (`userid`) REFERENCES `user_rating` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (3,'ali','35eff0da248ba056d0f3830d83d34c271c7524baf68556b171ff6fee5d2b1a57','4d1149f568afc0c6b9759b4bb61b89932ff03a08e9effab79f280ec930b5a3dc','shal5122@colorado.edu'),(4,'shaik','1bcd7f565e052f507ae83f6ecc4dbe40e8596b9c95abc95f273f6a9cd4a8d327','9e04a49e5786695116f9af28552da3083d4eeb015294b878d27053439e363cdf','shaik@colorado.edu'),(5,'abcd','7b94a6cd0bac83280b5f673b5194f96dc083d9f1425383f8fc7b5b3b431c779f','670d1430eca8c1f5fc91dd0089e0e62f2409eea629d3a826fe2f6def428e57a1','abcd@colorado.edu'),(6,'brandon','1095710bb29e212c7689623391b8825e6e078bae3f20cfe03ba374301520a670','0f9305fb9daaca6e97608d3bdcf8961b59b080bdffe35613e1deade56823785f','brandon@colorado.edu'),(8,'abhi','ac0305deefd734ba4749af603bcbd2606fa545b166805edd06fe74c62ed6f0f5','4a147f223b0bb73bc4b50d456afb6063e6cbb0d28fd09e9844ef76475429362a','abhi@colorado.edu'),(9,'admin','1deb3fa2895bb711ea1fa2f3c02f5bacf6584a274e7d0c5a9932107923c498c7','84961ee29c5440775f2f49d7743385593b3c018b544219640b27bac230078214','admin@colorado.edu'),(10,'joe','873027b0476d0f6185f046d15c6ba4c757e20ee975fb86e01de4799b41914fea','45297c633d331e6ac35169ebaaf75bc7fafd206ebb59ba4efd80566936e46eb0','joe@colorado.edu');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2016-04-26 22:50:21
